@@ -53,7 +53,7 @@ wget http://www.cbs.dtu.dk/services/NetMHCpan-3.0/data.tar.gz
 tar -xvf data.tar.gz
 
 
-# set environment variables
+# Set environment variables
 export TMPDIR=/home/wwang/Tools/netMHCpan-3.0/tmp
 export NMHOME=/home/wwang/Tools/netMHCpan-3.0/bin
 export NETMHCpan=/home/wwang/Tools/netMHCpan-3.0
