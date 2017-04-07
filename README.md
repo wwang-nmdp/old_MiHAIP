@@ -15,8 +15,8 @@ Therefore, comprehensive identification of dominant repertoire of MiHA and TSA i
    MiHA prediction algorithms: The proteasomal processing prediction by netChop3.1 and MHC class I binding prediction was performed by netMHCpan3
    
    2. Minor Histocompatibility Antigen Identification Pipeline
-
-Figure 2. Flowchart of MiHAidentification pipeline
+![alt tag](https://github.com/wwang-nmdp/MiHAIP/blob/ReleaseVersion/Untitled.png)
+Figure Flowchart of MiHAidentification pipeline
    Install theMiHA Identification Pipeline
       a. Install RTGtools from REAL TIME GENOMICS:
 wget https://github.com/RealTimeGenomics/rtg-tools/releases/download/3.7.1/rtg-tools-3.7.1-linux-x64.zip
