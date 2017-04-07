@@ -16,7 +16,7 @@ Therefore, comprehensive identification of dominant repertoire of MiHA and TSA i
    
    2. Minor Histocompatibility Antigen Identification Pipeline
 ![alt tag](https://github.com/wwang-nmdp/MiHAIP/blob/ReleaseVersion/Untitled.png)
-Figure Flowchart of MiHAidentification pipeline
+Figure 1. Flowchart of MiHAidentification pipeline
    Install theMiHA Identification Pipeline
       a. Install RTGtools from REAL TIME GENOMICS:
 wget https://github.com/RealTimeGenomics/rtg-tools/releases/download/3.7.1/rtg-tools-3.7.1-linux-x64.zip
