@@ -12,7 +12,7 @@ Therefore, comprehensive identification of dominant repertoire of MiHA and TSA i
    The variants’ effect annotation: snpEff was used to annotate the variants’ effects. 
    MiHA prediction algorithms: The proteasomal processing prediction by netChop3.1 and MHC class I binding prediction was performed by netMHCpan3
    
-## 2. Preinstallation
+## 2. Pre-installation
 ![alt tag](https://github.com/wwang-nmdp/MiHAIP/blob/ReleaseVersion/Untitled.png)
 Figure 1. Flowchart of MiHAidentification pipeline
    Install theMiHA Identification Pipeline
