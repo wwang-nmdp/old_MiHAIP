@@ -69,9 +69,9 @@ tar -xvf data.tar.gz
 ## 3. Set environment variables
 
 ```unix 
-export TMPDIR=/home/wwang/Tools/netMHCpan-3.0/tmp
-export NMHOME=/home/wwang/Tools/netMHCpan-3.0/bin
-export NETMHCpan=/home/wwang/Tools/netMHCpan-3.0
+export TMPDIR=/Path/to/Tools/netMHCpan-3.0/tmp
+export NMHOME=/Path/to/Tools/netMHCpan-3.0/bin
+export NETMHCpan=/Path/to/Tools/netMHCpan-3.0
 
 ../netMHCpan -p test.pep > test.pep.myout
 ../netMHCpan test.fsa > test.fsa.myout
