@@ -4,8 +4,8 @@ Allogeneic hematopoietic stem cell transplantation (alloHSCT) can be a curative 
 
 Therefore, comprehensive identification of dominant repertoire of MiHA and TSA is a reliable strategy for immunotherapy to augment GVL and prevent GVHD.
 
-#Bioinformatics > 
-  **1. Minor Histocompatibility Antigen Identification Pipeline**
+
+## 1. Minor Histocompatibility Antigen Identification Pipeline
 
       Design of Minor Histocompatibility Antigen Identification Pipeline
 
@@ -14,7 +14,7 @@ Therefore, comprehensive identification of dominant repertoire of MiHA and TSA i
    The variants’ effect annotation: snpEff was used to annotate the variants’ effects. 
    MiHA prediction algorithms: The proteasomal processing prediction by netChop3.1 and MHC class I binding prediction was performed by netMHCpan3
    
-**2. Minor Histocompatibility Antigen Identification Pipeline**
+## 2. Minor Histocompatibility Antigen Identification Pipeline
 ![alt tag](https://github.com/wwang-nmdp/MiHAIP/blob/ReleaseVersion/Untitled.png)
 Figure 1. Flowchart of MiHAidentification pipeline
    Install theMiHA Identification Pipeline
@@ -67,7 +67,7 @@ wget http://www.cbs.dtu.dk/services/NetMHCpan-3.0/data.tar.gz
 tar -xvf data.tar.gz
 ```
 
-## Set environment variables
+## 3. Set environment variables
 
 ```unix 
 export TMPDIR=/home/wwang/Tools/netMHCpan-3.0/tmp
@@ -106,7 +106,7 @@ Generate an output file named filteredFile.txt
 ```unix 
 java -jar ./MiHAIP1.4.5.jar/Tools/freq2db.jar filteredFile.txt
 ```
-## Test the Pipeline by Sample Data
+## 4. Test the Pipeline by Sample Data
 For testing the MiHA identification pipeline, you could use a pair of sample data from: /Volumes/bioxover/users/wwang/MiHAIP_released
 Copy all the executable programs (netChop-3.1, netMHCpan-3.0, RTG.jar and snpEff.jar) into the directory ./MiHAIP1.4.5/Tools.
 Copy the input files into ./path/to/input. Caution: the input files should include the .vcf.gz and index file .vcf.gz.tbi
