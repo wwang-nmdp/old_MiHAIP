@@ -5,32 +5,30 @@ Allogeneic hematopoietic stem cell transplantation (alloHSCT) can be a curative 
 Therefore, comprehensive identification of dominant repertoire of MiHA and TSA is a reliable strategy for immunotherapy to augment GVL and prevent GVHD.
 
 
-## 1. Minor Histocompatibility Antigen Identification Pipeline
-
-      Design of Minor Histocompatibility Antigen Identification Pipeline
+## 1. Design of Minor Histocompatibility Antigen Identification Pipeline
 
    The MiHA identification pipeline integrates diverse biological data sources include whole genome sequencing data, HLA genotyping, clinical outcomes,  tissue-specific expression data, known MiHAs data and minor allele frequencies, as well as integrates multiple 3rd party software include RTGtools (ref), snpEff (ref), netchop3.1 and netMHCpan3.0 to predict the potential MiHAs by comparing the variants between transplanted donor and recipient. Meanwhile, the pipeline simulates the antigen processing and presenting on recipients’ cell surface via restricted HLA molecules. For details of pipeline please check the flowchart (Figure 2).
    Two genome comparison: RTGtools were applied to compare the whole genome sequencing data between donor and recipient.
    The variants’ effect annotation: snpEff was used to annotate the variants’ effects. 
    MiHA prediction algorithms: The proteasomal processing prediction by netChop3.1 and MHC class I binding prediction was performed by netMHCpan3
    
-## 2. Minor Histocompatibility Antigen Identification Pipeline
+## 2. Preinstallation
 ![alt tag](https://github.com/wwang-nmdp/MiHAIP/blob/ReleaseVersion/Untitled.png)
 Figure 1. Flowchart of MiHAidentification pipeline
    Install theMiHA Identification Pipeline
-      ###### a. Install RTGtools from REAL TIME GENOMICS:
+** a. Install RTGtools** from REAL TIME GENOMICS:
 ```unix 
 wget https://github.com/RealTimeGenomics/rtg-tools/releases/download/3.7.1/rtg-tools-3.7.1-linux-x64.zip
 unzip rtg-tools-3.7.1-linux-x64.zip
-```
+
 ~/Tools/rtg-tools-3.6.2$ java -jar RTG.jar 
 
-```unix 
+
 Usage: rtg COMMAND [OPTION]...
 rtg RTG_MEM=16G COMMAND [OPTION]...  (e.g. to set maximum memory use to 16 GB)
 Type 'rtg help COMMAND' for help on a specific command.
 ```
-      ###### b. Install SnpEff from http://snpeff.sourceforge.net/index.html  SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes).
+** b. Install SnpEff** from http://snpeff.sourceforge.net/index.html  SnpEff is a variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes (such as amino acid changes).
 
 ```unix 
 wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
@@ -41,7 +39,7 @@ java -jar snpEff.jar
 
 #Usage: snpEff build [options] genome_version
 java -jar snpEff.jar build GRCh38.82
-      ###### c. Install netChop3.1 from Center For Biological Sequence Analysis, Technical University of Denmark.
+** c. Install netChop3.1** from Center For Biological Sequence Analysis, Technical University of Denmark.**
    The NetChop 3.1 may be downloaded only by special agreement.  For academic users there is a download site at:http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netchop. Other users are requested to contact   software@cbs.dtu.dk.   
 
 ```unix 
@@ -57,8 +55,9 @@ bin/netchop test/test.fsa > test.out
 ```unix 
 chmod 1777 $TMPDIR
 ```
-      ###### d. Install netMHCpan3.0
+** d. Install netMHCpan3.0 **
 Like netChop, the netMHCpan-3.0 may only be downloaded only by special agreement as well. In addition, it requests to download the data file (data.tar.gz) separately.
+
 ```unix 
 cat netMHCpan-3.0.<unix>.tar.gz | uncompress | tar xvf -
 
@@ -79,7 +78,7 @@ export NETMHCpan=/home/wwang/Tools/netMHCpan-3.0
 ../netMHCpan -hlaseq B0702.fsa test.fsa > test.fsa_userMHC.myout
 ```
 
-###### Install MiHAIP:
+## 4. Install MiHAIP and build database
 Copy MiHAIP_1.4.5.tar.gz and cds.db from /Volumes/bioxover/users/wwang/MiHAIP_released
 
 ```unix 
@@ -106,7 +105,7 @@ Generate an output file named filteredFile.txt
 ```unix 
 java -jar ./MiHAIP1.4.5.jar/Tools/freq2db.jar filteredFile.txt
 ```
-## 4. Test the Pipeline by Sample Data
+## 5. Test the Pipeline by Sample Data
 For testing the MiHA identification pipeline, you could use a pair of sample data from: /Volumes/bioxover/users/wwang/MiHAIP_released
 Copy all the executable programs (netChop-3.1, netMHCpan-3.0, RTG.jar and snpEff.jar) into the directory ./MiHAIP1.4.5/Tools.
 Copy the input files into ./path/to/input. Caution: the input files should include the .vcf.gz and index file .vcf.gz.tbi
